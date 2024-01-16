@@ -4,7 +4,7 @@
 
 fonte: open sans e just another hand*/
 body{
-    height: 100vh;
+    height: 100vw;
     background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);
 }
 .arrow{
@@ -17,21 +17,97 @@ body{
     border-radius: 0 0 10px 10px;
 }
 .all{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-areas: "titulo, titulo" ;
 }
 .header{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: "titulo";
 }
 .header .title{
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 3px;
+    font-size: 50px;
+}
+.hr_title{
+    color: #000000;
+    border: 1px solid black;
+    width: 60vh;
+    transform: translate(-20%, -500%);
+    margin: auto;
 }
 .header .wpp{
     width: 40px;
     transform: translate(100%, -20%);
 }
-.description, .footer{
+.description{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 20px;
+}
+.products, .footer{
     background-color: #75F692CC;
+}
+form{
+    grid-area: 'form';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+form .tel{
+    /* corrigir tamanho com display flex */
+    width: 520px; 
+    height: 60px;
+    border-radius: 60px;
+    font-size: 20px;
+    padding: 0 0 0 20px;
+}
+form .msg{
+    width: 680px;
+    height: 220px;
+    font-size: 20px;
+    padding: 10px 5px 10px 20px;
+    border-radius: 30px;
+}
+form .btn_sub{
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 20px;
+    background-color: #000000DD;
+    color: #ffffff;
+    font-weight: bold;
+}
+.coppy input{
+    width: 510px;
+    height: 60px;
+    border-radius: 60px;
+    font-size: 20px;
+}
+.coppy .coppy_btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 60px;
+    font-size: 20px;
+}
+
+.products, .footer{
+    font-family: 'Just Another Hand', cursive;
+    width: 370px;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 20px;
+    margin: auto;
+
+}
+.products{
+    /* height: 400px; */
+    grid-area: 'produtos';
+}
+.footer{
+    /* height: 200px; */
+    grid-area: 'cafezinho';
 }
