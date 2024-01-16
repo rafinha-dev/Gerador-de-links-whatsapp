@@ -11,7 +11,7 @@ body{
     width: 180px;
     position: absolute;
     top: 0px;
-    left: 25%;
+    left: 20%;
     transform: rotate(120deg);
     z-index: -1;
 }
@@ -40,7 +40,7 @@ body{
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 3px;
     /* margin: 20px 1px ; */
-    padding: 00px 30px;
+    padding: 00px 20px 0 0;
     /* background-color: red; */
     font-size: 40px;
 }
@@ -51,11 +51,19 @@ body{
 }
 .description{
     font-family: 'Bai Jamjuree', sans-serif;
+    max-width: 300px;
+    padding: 20px 0 ;
+    text-align: center;
 }
 .my_adds, .footer{
     background-color: #75F692CC;
     border: 1px solid black;
     border-radius: 20px;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     
     
 }
@@ -68,6 +76,26 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    /* align-items: center; */
+
+}
+.form .tel{
+    border-radius: 30px;
+}
+.form .tel, .form .msg{
+    padding: 5px 10px;
+}
+.form .msg, .form .sub_btn, .form .coppy .coppy_btn{
+    border-radius: 20px;
+}
+.sub_btn{
+    background-color: #000000CC;
+    font-weight: bold;
+    color: #ffffff;
+    height: 40px;
+    max-width: 110px;
+    min-width: 80px;
+    margin: auto;
 }
 .form .coppy{
     display: flex;
@@ -79,4 +107,8 @@ body{
 }
 .form .coppy .coppy_btn{
     font-size: 18px;
+    background-color: #f0f0f0;
+    border: none;
+    min-width: 150px;
+    height: 50px;
 }
