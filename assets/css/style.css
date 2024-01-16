@@ -8,7 +8,7 @@ body{
     background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);
 }
 .arrow{
-    width: 80px;
+    width: 15%;
     height: 30px;
     background-image: url(../images/setinhaMin.png);
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body{
     background-size: 20px;
     border-radius: 0 0 10px 10px;
 }
-.all{
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,11 +27,16 @@ body{
 .header .title{
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 3px;
+    /* margin: 20px 1px ; */
+    padding: 00px 10px;
+    /* background-color: red; */
 }
 .header .wpp{
     width: 40px;
-    transform: translate(100%, -20%);
+    transform: translate(0%, -20%);
 }
-.description, .footer{
+.my_adds, .footer{
     background-color: #75F692CC;
+    border: 1px solid black;
+    border-radius: 20px;
 }
