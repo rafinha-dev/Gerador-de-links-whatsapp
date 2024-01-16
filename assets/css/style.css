@@ -32,6 +32,7 @@ body{
     align-items: center;
     padding: 10%;
 }
+
 .header{
     display: flex;
 }
@@ -41,15 +42,26 @@ body{
     /* margin: 20px 1px ; */
     padding: 00px 30px;
     /* background-color: red; */
+    font-size: 40px;
 }
 .header .wpp{
-    width: 40px;
+    width: 65px;
+    height: 65px;
     transform: translate(0%, -00%);
+}
+.description{
+    font-family: 'Bai Jamjuree', sans-serif;
 }
 .my_adds, .footer{
     background-color: #75F692CC;
     border: 1px solid black;
     border-radius: 20px;
+    
+    
+}
+.my_adds .my_adds_word, .footer .donation{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 20px;
 }
 .form{
     padding: 20px 0;
@@ -64,4 +76,7 @@ body{
 }
 .form .coppy_link{
     display: none;
+}
+.form .coppy .coppy_btn{
+    font-size: 18px;
 }
