@@ -1,0 +1,37 @@
+/* cores 
+#B6FFF6 background
+#75F692 div
+
+fonte: open sans e just another hand*/
+body{
+    height: 100vh;
+    background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);
+}
+.arrow{
+    width: 80px;
+    height: 30px;
+    background-image: url(../images/setinhaMin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    border-radius: 0 0 10px 10px;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    display: flex;
+}
+.header .title{
+    font-family: 'Just Another Hand', cursive;
+    letter-spacing: 3px;
+}
+.header .wpp{
+    width: 40px;
+    transform: translate(100%, -20%);
+}
+.description, .footer{
+    background-color: #75F692CC;
+}
