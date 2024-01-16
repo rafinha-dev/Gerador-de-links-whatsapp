@@ -4,12 +4,22 @@
 
 fonte: open sans e just another hand*/
 body{
-    height: 100vh;
+    height: 100% ;
     background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);
 }
+.img_um{
+    width: 180px;
+    position: absolute;
+    top: 0px;
+    left: 25%;
+    transform: rotate(120deg);
+    z-index: -1;
+}
 .arrow{
-    width: 15%;
+    min-width: 50px;
+    max-width: 100px;
     height: 30px;
+    margin: 0px 10px;
     background-image: url(../images/setinhaMin.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -20,6 +30,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10%;
 }
 .header{
     display: flex;
@@ -28,15 +39,29 @@ body{
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 3px;
     /* margin: 20px 1px ; */
-    padding: 00px 10px;
+    padding: 00px 30px;
     /* background-color: red; */
 }
 .header .wpp{
     width: 40px;
-    transform: translate(0%, -20%);
+    transform: translate(0%, -00%);
 }
 .my_adds, .footer{
     background-color: #75F692CC;
     border: 1px solid black;
     border-radius: 20px;
+}
+.form{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form .coppy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form .coppy_link{
+    display: none;
 }
