@@ -1,8 +1,4 @@
-/* cores 
-#B6FFF6 background
-#75F692 div
-
-fonte: open sans e just another hand*/
+/* falta colocar um estilo no focus dos inputs e text-area */
 body{
     height: 100% ;
     background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);

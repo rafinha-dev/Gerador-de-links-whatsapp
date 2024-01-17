@@ -16,15 +16,25 @@ function doEvent(e){
     e.preventDefault()
 }
 
-get_link.addEventListener('click', warning)
 
-function warning(){
+
+get_link.addEventListener('click', function(){
+
         const sub_warning = document.createElement("p")
         const warning = document.createTextNode("Digite o número do whatssapp!")
         sub_warning.appendChild(warning)
+
         let cont = document.querySelectorAll('.warning p').length
+        tel.addEventListener('input', function(){
+            console.log(tel.value)
+        })
         console.log(cont)
-            if( cont === 0){
+            if( cont === 0 & tel.value.length < 10){
                 div_warning.appendChild(sub_warning)
         }
-}
+        if(cont > 0 && tel.value.length >= 10){
+            div_warning.innerHTML = ""
+        }
+})
+
+// colocar mascara para telefone no input tel https://www.ramoncp.com.br/snippets/mascara-de-telefone-para-input-em-js
