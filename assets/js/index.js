@@ -14,3 +14,4 @@ function doEvent(e){
     console.log(`ipo do evento: ${e.type}`)
     e.preventDefault()
 }
+// 1 colocar as letras do titulo em upper case

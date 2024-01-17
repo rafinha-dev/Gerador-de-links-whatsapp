@@ -32,28 +32,42 @@ body{
     align-items: center;
     padding: 10%;
 }
+/* .all{
+    display: grid;
+    grid-template-areas: "titulo, titulo" ;
+}  */
 
 .header{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header .title{
     font-family: 'Just Another Hand', cursive;
-    letter-spacing: 3px;
-    /* margin: 20px 1px ; */
-    padding: 00px 20px 0 0;
+    /* padding: 00px 20px 0 0; */
     /* background-color: red; */
     font-size: 40px;
+    text-transform: uppercase;
 }
+
+/* .hr_title{
+    color: #000000;
+    border: 1px solid black;
+    width: 60vh;
+    transform: translate(-20%, -500%);
+    margin: auto;
+} */
 .header .wpp{
     width: 65px;
     height: 65px;
-    transform: translate(0%, -00%);
+    /* transform: translate(0%, -00%); */
 }
 .description{
     font-family: 'Bai Jamjuree', sans-serif;
     max-width: 300px;
     padding: 20px 0 ;
     text-align: center;
+    text-transform: uppercase;
 }
 .my_adds, .footer{
     background-color: #75F692CC;
@@ -64,6 +78,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px;
+    text-transform: uppercase;
     
     
 }
@@ -84,6 +99,9 @@ body{
 }
 .form .tel, .form .msg{
     padding: 5px 10px;
+}
+.form .tel::placeholder, .form .msg::placeholder{
+    text-transform: uppercase;
 }
 .form .msg, .form .sub_btn, .form .coppy .coppy_btn{
     border-radius: 20px;
@@ -111,4 +129,4 @@ body{
     border: none;
     min-width: 150px;
     height: 50px;
-}
+} 
