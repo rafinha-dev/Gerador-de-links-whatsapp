@@ -106,6 +106,11 @@ body{
 .form .msg, .form .sub_btn, .form .coppy .coppy_btn{
     border-radius: 20px;
 }
+.form .warning{
+    color: #FF0404;
+    text-align: center;
+    text-transform: uppercase;
+}
 .sub_btn{
     background-color: #000000CC;
     font-weight: bold;
