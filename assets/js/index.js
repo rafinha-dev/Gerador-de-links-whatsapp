@@ -14,4 +14,8 @@ function doEvent(e){
     console.log(`ipo do evento: ${e.type}`)
     e.preventDefault()
 }
-// 1 colocar as letras do titulo em upper case
+const sub_warning = document.createElement("p")
+const warning = document.createTextNode("Digite o número do whatssapp")
+sub_warning.appendChild(warning)
+
+.appendChild(sub_warning)
