@@ -39,8 +39,11 @@ get_link.addEventListener('click', function(){
 tel.addEventListener('keyup', (e)=> {
     let input = e.target
     input.value = phoneMask(input.value)
+    let num = input.value
+    num = maskRemove(num)
+    numLink(num)
 })
-// colocar mascara para telefone no input tel 
+ 
 const phoneMask = (value)=>{
     if(!value) return ""
     value = value.replace(/\D/g,'')
@@ -49,28 +52,35 @@ const phoneMask = (value)=>{
     return value
     // https://www.ramoncp.com.br/snippets/mascara-de-telefone-para-input-em-js
 }
+const maskRemove = (value)=> {
+    if (!value) return ""
+    value = value.replace(/[^\d]/g, '')
+    return value
+}
+const numLink = (num)=> {
+    let link_num_index = "https://wa.me/"
+    let finished_num = link_num_index + num
+    finished_link(finished_num)
+}
 
-// nesse caso, para usar espaços, use %20 entre as palavras
+area.addEventListener('input', ()=>{
+    let link_msg_index = "?text="
+    let wpp_msg = area.value
 
-// passo um criar uma variável que contenha a formula do link com o número
+    let msg_split = wpp_msg.split(" ")
+    let msg_index = msg_split.join('%20')
+    
+    let finished_msg = (link_msg_index + msg_index)
+    finished_link(finished_msg)
+    // preciso colocar um event listner aqui já que será feito a formula só no botão de gerar link?
+})
+
+// passo um criar uma variável que contenha a formula do link com o número 
 //passo dois criar uma variavel que armazena a formula do texto do link.
 // passo 3 ter duas variáveis com o número e o texto. 
-
-// criar metodo para fazer um split e colocar esse caractere em todos os espaços.
-// Estou tendo problemas com a variavel do número, preciso remover espaços e caracteres especiais. Minha ideia é colocar um split e um foreach pro array testando com rejex. Caso positivo guardar na variavel. Porem não estou conseguindo fazer isso.
-
 // passo 4 de alguma forma colocar as informações guardadas na formulas
+
 // passo 5 concatenar as duas formulas caso tenha texto
 // passo 6 ao clicar no botão copiar a formula.
  
-const link_num_index = "https://wa.me/"
-let link_msg_index = "?text="
-area.addEventListener('input', ()=>{
 
-    let wpp_msg = area.value
-    let msg_split = wpp_msg.split(" ")
-    let msg_index = msg_split.join('%20')
-    console.log(msg_index)
-    let finished_msg = (link_msg_index + msg_index)
-    // preciso colocar um event listner aqui já que será feito a formula só no botão de gerar link?
-})
