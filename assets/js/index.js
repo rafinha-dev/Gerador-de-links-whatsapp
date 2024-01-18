@@ -81,11 +81,22 @@ const makeMsg = (msg)=>{
     return finished_msg
 }
 const finished_link = (value)=> {
-    let test = value.split('')
-    if( test[0] === '?'){
-        const msg = value
-    }else if(test[0] === 'h'){
-        const msg = value
+    if(value !== undefined){
+        let msg = ""
+        let num = ""
+        let test = value.split('')
+        
+        if(test[0] === 'h'){
+            num = value
+       }else if(num === ""){
+            num = num
+       }
+        if( test[0] === '?'){
+            msg = value
+        } 
+        
+        console.log(num) // por que capitura vazia?
+        console.log(msg)
     }
 }
 
