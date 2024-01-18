@@ -41,7 +41,9 @@ tel.addEventListener('keyup', (e)=> {
     input.value = phoneMask(input.value)
     let num = input.value
     num = maskRemove(num)
-    numLink(num)
+    let finished_num = makeNumLink(num)
+    // console.log(finished_num)
+    finished_link(finished_num)
 })
  
 const phoneMask = (value)=>{
@@ -57,23 +59,36 @@ const maskRemove = (value)=> {
     value = value.replace(/[^\d]/g, '')
     return value
 }
-const numLink = (num)=> {
+const makeNumLink = (num)=> {
     let link_num_index = "https://wa.me/"
     let finished_num = link_num_index + num
-    finished_link(finished_num)
+    return finished_num
 }
 
 area.addEventListener('input', ()=>{
-    let link_msg_index = "?text="
     let wpp_msg = area.value
+    wpp_msg = makeMsg(wpp_msg)
+    // console.log(wpp_msg)
+    finished_link(wpp_msg)
+})
 
-    let msg_split = wpp_msg.split(" ")
+const makeMsg = (msg)=>{
+    let link_msg_index = "?text="
+    let msg_split = msg.split(" ")
     let msg_index = msg_split.join('%20')
     
     let finished_msg = (link_msg_index + msg_index)
-    finished_link(finished_msg)
-    // preciso colocar um event listner aqui já que será feito a formula só no botão de gerar link?
-})
+    return finished_msg
+}
+const finished_link = (value)=> {
+    let test = value.split('')
+    if( test[0] === '?'){
+        const msg = value
+    }else if(test[0] === 'h'){
+        const msg = value
+    }
+}
+
 
 // passo um criar uma variável que contenha a formula do link com o número 
 //passo dois criar uma variavel que armazena a formula do texto do link.
