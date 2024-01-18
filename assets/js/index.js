@@ -37,4 +37,15 @@ get_link.addEventListener('click', function(){
         }
 })
 
-// colocar mascara para telefone no input tel https://www.ramoncp.com.br/snippets/mascara-de-telefone-para-input-em-js
+tel.addEventListener('keyup', (e)=> {
+    let input = e.target
+    input.value = phoneMask(input.value)
+})
+// colocar mascara para telefone no input tel 
+const phoneMask = (value)=>{
+    if(!value) return ""
+    value = value.replace(/\D/g,'')
+    value = value.replace(/(\d{2})(\d)/,"($1) $2")
+    value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+    return value
+}
