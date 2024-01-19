@@ -26,7 +26,7 @@ function doEvent(e){
     let finished_num = makeNumLink(num)
 
     let link = finished_link(finished_num, wpp_msg)
-    coppyLink(link)
+    coppyLink(link, num)
 }
 
 function createWarning(){
@@ -37,11 +37,12 @@ function createWarning(){
 }
 function submitWarning(value){
         let cont = document.querySelectorAll('.warning p').length
+        let num = objects.tel.value.length
         
-        if( cont === 0 & objects.tel.value.length < 10){
+        if( cont === 0 && num < 14){
                 objects.div_warning.appendChild(value)
         }
-        if(cont > 0 && objects.tel.value.length >= 10){
+        if(cont > 0 && num >= 14){
             objects.div_warning.innerHTML = ""
         }
 }
@@ -69,9 +70,6 @@ const makeNumLink = (num)=> {
     return finished_num
 }
 
-// objects.area.addEventListener('input', ()=>{
-// })
-
 const makeMsg = (msg)=>{
     let link_msg_index = "?text="
     let msg_split = msg.split(" ")
@@ -90,22 +88,14 @@ const finished_link = (num, msg)=> {
     }
     return link
 }
-function coppyLink(value) {
-    // proteger contra o bug de clicar mais de uma vez
-    objects.coppy_link.addEventListener('click', ()=>{
-        navigator.clipboard.writeText(value).then(()=> {
-            console.log(value)
+function coppyLink(link, num) {
+
+    if(num.length >= 10){
+        objects.coppy_link.addEventListener('click', ()=>{
+            navigator.clipboard.writeText(link).then(()=> {
+                console.log(link)
+            })
         })
-    })
+    }
 }
-
-
-// passo um criaruma variável que contenha a formula do link com o número 
-//passo dois criar uma variavel que armazena a formula do texto do link.
-// passo 3 ter duas variáveis com o número e o texto. 
-// passo 4 de alguma forma colocar as informações guardadas na formulas
-// passo 5 concatenar as duas formulas caso tenha texto
-
-// passo 6 ao clicar no botão copiar a formula.
- 
 
