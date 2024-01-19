@@ -134,3 +134,6 @@ body{
     justify-content: center;
     align-items: center;
 } 
+
+/* 1. adicionar efeito de copiar e de gerar link nos botões
+2. colocar uma borda de selected de acordo com o layout nos inputs. */

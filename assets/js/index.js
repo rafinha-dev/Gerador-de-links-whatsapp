@@ -98,4 +98,5 @@ function coppyLink(link, num) {
         })
     }
 }
+// colocar no input visivel somente no formato desktop o link também.
 
