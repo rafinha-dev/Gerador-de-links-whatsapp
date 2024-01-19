@@ -12,9 +12,20 @@ objects.area.innerHTML = ""
 
 objects.form.addEventListener('submit', doEvent)
 function doEvent(e){
+
     e.preventDefault()
+
     let warning = createWarning()
     submitWarning(warning)
+
+    let wpp_msg = objects.area.value
+    wpp_msg = makeMsg(wpp_msg)
+
+    let num = objects.tel.value
+    num = maskRemove(num)
+    let finished_num = makeNumLink(num)
+
+    finished_link(finished_num, wpp_msg)
 }
 
 function createWarning(){
@@ -37,11 +48,6 @@ function submitWarning(value){
 objects.tel.addEventListener('keyup', (e)=> {
     let input = e.target
     input.value = phoneMask(input.value)
-    let num = input.value
-    num = maskRemove(num)
-    let finished_num = makeNumLink(num)
-    // console.log(finished_num)
-    finished_link(finished_num)
 })
  
 const phoneMask = (value)=>{
@@ -53,7 +59,6 @@ const phoneMask = (value)=>{
     // https://www.ramoncp.com.br/snippets/mascara-de-telefone-para-input-em-js
 }
 const maskRemove = (value)=> {
-    if (!value) return ""
     value = value.replace(/[^\d]/g, '')
     return value
 }
@@ -63,12 +68,8 @@ const makeNumLink = (num)=> {
     return finished_num
 }
 
-objects.area.addEventListener('input', ()=>{
-    let wpp_msg = objects.area.value
-    wpp_msg = makeMsg(wpp_msg)
-    // console.log(wpp_msg)
-    finished_link(wpp_msg)
-})
+// objects.area.addEventListener('input', ()=>{
+// })
 
 const makeMsg = (msg)=>{
     let link_msg_index = "?text="
@@ -78,33 +79,17 @@ const makeMsg = (msg)=>{
     let finished_msg = (link_msg_index + msg_index)
     return finished_msg
 }
-const finished_link = (value)=> {
-    if(value !== undefined){
-        let msg = ""
-        let num = ""
-        let test = value.split('')
-        
-        if(test[0] === 'h'){
-            num = value
-       }else if(num === ""){
-            num = num
-       }
-        if( test[0] === '?'){
-            msg = value
-        } 
-        
-        // console.log(num)  por que capitura vazia?
-        // console.log(msg)
-    }
+const finished_link = (num, msg)=> {
+    console.log(num + msg)
 }
 
 
-// passo um criar uma variável que contenha a formula do link com o número 
+// passo um criaruma variável que contenha a formula do link com o número 
 //passo dois criar uma variavel que armazena a formula do texto do link.
 // passo 3 ter duas variáveis com o número e o texto. 
 // passo 4 de alguma forma colocar as informações guardadas na formulas
-
 // passo 5 concatenar as duas formulas caso tenha texto
+
 // passo 6 ao clicar no botão copiar a formula.
  
 
