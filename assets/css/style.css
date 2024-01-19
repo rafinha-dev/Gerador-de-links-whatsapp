@@ -11,6 +11,9 @@ body{
     transform: rotate(120deg);
     z-index: -1;
 }
+.img_dois, .img_tres{
+    display: none;
+}
 .arrow{
     min-width: 50px;
     max-width: 100px;
@@ -137,3 +140,59 @@ body{
 
 /* 1. adicionar efeito de copiar e de gerar link nos botões
 2. colocar uma borda de selected de acordo com o layout nos inputs. */
+@media (min-width: 992px) {
+    .img_um{
+        left: 35%;
+        top: 8%;
+        width: 200px;
+    }
+    .img_dois, .img_tres{
+        display: inline;
+        position: absolute;
+        width: 180px;
+    }
+    .img_dois{
+        transform: rotate(350deg);
+        top: 70%;
+        left: 12%;
+        z-index: -1;
+    }
+    .img_tres{
+        top: 60%;
+        left: 60%;
+        transform: rotate(220deg);
+        z-index: -1;
+    }
+    .wpp{
+        margin-left: 100px;
+        transform: translate(-50%, -8%);
+    }
+    .hr_title{
+        width: 400px;
+        transform: translate(25%, -1000%);
+        border: 1px solid black;
+        border-radius: 50%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .container{
+        display: grid;
+        
+    }
+    .description{
+        margin: auto;
+    }
+    .my_adds{
+        margin: auto;
+    }
+    .header{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .form{
+        max-width: 440px;
+    }
+    .footer{
+        margin: auto;
+    }
+}
