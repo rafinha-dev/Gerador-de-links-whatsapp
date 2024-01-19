@@ -1,42 +1,40 @@
 // inserir mensagem de erro caso clique no gerar link
-let form = document.querySelector('.form')
-let get_link = document.querySelector('.sub_btn')
-let coppy_link = document.querySelector('.coppy_btn')
-
-let tel = document.querySelector('.tel')
-let div_warning = document.querySelector('.warning')
-
-
-
-let area = document.querySelector('.msg')
-area.innerHTML = ""
-
-form.addEventListener('submit', doEvent)
-function doEvent(e){
-    e.preventDefault()
+const objects = {
+    form : document.querySelector('.form'),
+    tel : document.querySelector('.tel'),
+    area : document.querySelector('.msg'),
+    div_warning : document.querySelector('.warning'),
+    get_link : document.querySelector('.sub_btn'),
+    coppy_link : document.querySelector('.coppy_btn'),
 }
 
+objects.area.innerHTML = ""
 
+objects.form.addEventListener('submit', doEvent)
+function doEvent(e){
+    e.preventDefault()
+    let warning = createWarning()
+    submitWarning(warning)
+}
 
-get_link.addEventListener('click', function(){
-
-        const sub_warning = document.createElement("p")
-        const warning = document.createTextNode("Digite o número do whatssapp!")
-        sub_warning.appendChild(warning)
-
+function createWarning(){
+    const submit_warning = document.createElement("p")
+    const warning = document.createTextNode("Digite o número do whatssapp!")
+    submit_warning.appendChild(warning)
+    return submit_warning
+}
+function submitWarning(value){
         let cont = document.querySelectorAll('.warning p').length
-        tel.addEventListener('input', function(){
-            console.log(tel.value)
-        })
-        if( cont === 0 & tel.value.length < 10){
-                div_warning.appendChild(sub_warning)
+        
+        if( cont === 0 & objects.tel.value.length < 10){
+                objects.div_warning.appendChild(value)
         }
-        if(cont > 0 && tel.value.length >= 10){
-            div_warning.innerHTML = ""
+        if(cont > 0 && objects.tel.value.length >= 10){
+            objects.div_warning.innerHTML = ""
         }
-})
+}
 
-tel.addEventListener('keyup', (e)=> {
+objects.tel.addEventListener('keyup', (e)=> {
     let input = e.target
     input.value = phoneMask(input.value)
     let num = input.value
@@ -65,8 +63,8 @@ const makeNumLink = (num)=> {
     return finished_num
 }
 
-area.addEventListener('input', ()=>{
-    let wpp_msg = area.value
+objects.area.addEventListener('input', ()=>{
+    let wpp_msg = objects.area.value
     wpp_msg = makeMsg(wpp_msg)
     // console.log(wpp_msg)
     finished_link(wpp_msg)
@@ -95,8 +93,8 @@ const finished_link = (value)=> {
             msg = value
         } 
         
-        console.log(num) // por que capitura vazia?
-        console.log(msg)
+        // console.log(num)  por que capitura vazia?
+        // console.log(msg)
     }
 }
 
