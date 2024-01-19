@@ -25,7 +25,8 @@ function doEvent(e){
     num = maskRemove(num)
     let finished_num = makeNumLink(num)
 
-    finished_link(finished_num, wpp_msg)
+    let link = finished_link(finished_num, wpp_msg)
+    coppyLink(link)
 }
 
 function createWarning(){
@@ -80,7 +81,22 @@ const makeMsg = (msg)=>{
     return finished_msg
 }
 const finished_link = (num, msg)=> {
-    console.log(num + msg)
+    let link = ""
+    let i = msg.length
+    if( i <= 7){
+        link = num
+    }else{
+        link = num + msg
+    }
+    return link
+}
+function coppyLink(value) {
+    // proteger contra o bug de clicar mais de uma vez
+    objects.coppy_link.addEventListener('click', ()=>{
+        navigator.clipboard.writeText(value).then(()=> {
+            console.log(value)
+        })
+    })
 }
 
 
