@@ -116,14 +116,10 @@ body{
 .form .coppy_link{
     display: none;
 }
-.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover{
+.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover{
     outline: 0;
     box-shadow: 10px 5px #00000063;
     transition-duration: 500ms;
-}
-.coppy_btn:focus{
-    background-color: red;
-
 }
 .form .coppy .coppy_btn{
     font-size: 18px;
@@ -140,7 +136,7 @@ body{
     height: 40px;
     border-radius: 30px;
     margin-top: 10px;
-    background-color: rgb(255, 207, 215);
+    background-color: #ffcfd7;
     border: 1px solid gray;
 }
 .share{
@@ -227,6 +223,9 @@ body{
         max-width: 680px;
          align-items: center;
          margin: auto;
+         padding: 20px;
+         border-radius: 20px;
+         background-color: #ffcfd738;
     }
     .form .tel{
         min-width: 520px;

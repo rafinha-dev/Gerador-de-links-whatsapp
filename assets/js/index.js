@@ -7,6 +7,7 @@ const objects = {
     get_link : document.querySelector('.sub_btn'),
     input_link: document.querySelector('.coppy_link'),
     coppy_link : document.querySelector('.coppy_btn'),
+    share: document.querySelector('#share')
 }
 
 objects.area.innerHTML = ""
@@ -107,3 +108,15 @@ function avalebleLink(link,num){
     }
 }
 
+objects.share.addEventListener('click', ()=>{
+    if (navigator.share !== undefined) {
+        navigator.share({
+            title: 'Gerador de link para whatsapp',
+            text: 'Crie agora mesmo um link para divulgar seu whatsapp, podendo usar uma mensagem programada! ',
+            url: 'https://seusite.com/sua_url',
+        })}else{
+            navigator.clipboard.writeText(document.location.href).then(()=> {
+                console.log(document.location.href)
+            })
+        }
+})
