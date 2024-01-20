@@ -119,6 +119,10 @@ body{
     box-shadow: 10px 5px #00000063;
     transition-duration: 500ms;
 }
+.coppy_btn:focus{
+    background-color: red;
+
+}
 .form .coppy .coppy_btn{
     font-size: 18px;
     background-color: #f0f0f0;
@@ -192,7 +196,7 @@ body{
     .container .form{
         max-width: 680px;
          align-items: center;
-         justify-content: center;
+         margin: auto;
     }
     .form .tel{
         min-width: 520px;

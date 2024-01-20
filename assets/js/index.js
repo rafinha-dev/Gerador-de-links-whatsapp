@@ -5,6 +5,7 @@ const objects = {
     area : document.querySelector('.msg'),
     div_warning : document.querySelector('.warning'),
     get_link : document.querySelector('.sub_btn'),
+    input_link: document.querySelector('.coppy_link'),
     coppy_link : document.querySelector('.coppy_btn'),
 }
 
@@ -27,6 +28,7 @@ function doEvent(e){
 
     let link = finished_link(finished_num, wpp_msg)
     coppyLink(link, num)
+    avalebleLink(link,num)
 }
 
 function createWarning(){
@@ -98,5 +100,10 @@ function coppyLink(link, num) {
         })
     }
 }
-// colocar no input visivel somente no formato desktop o link também.
+function avalebleLink(link,num){
+    let input = objects.input_link
+    if(num.length >= 10){
+        input.value = link + num
+    }
+}
 
