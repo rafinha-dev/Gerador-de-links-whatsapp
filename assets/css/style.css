@@ -31,37 +31,24 @@ body{
     align-items: center;
     padding: 10%;
 }
-/* .all{
-    display: grid;
-    grid-template-areas: "titulo, titulo" ;
-}  */
-
-.header{
+.container .header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.header .title{
+.container .header .title{
     font-family: 'Just Another Hand', cursive;
     /* padding: 00px 20px 0 0; */
     /* background-color: red; */
     font-size: 40px;
     text-transform: uppercase;
 }
-
-/* .hr_title{
-    color: #000000;
-    border: 1px solid black;
-    width: 60vh;
-    transform: translate(-20%, -500%);
-    margin: auto;
-} */
-.header .wpp{
+.container .header .wpp{
     width: 65px;
     height: 65px;
     /* transform: translate(0%, -00%); */
 }
-.description{
+.container .description{
     font-family: 'Bai Jamjuree', sans-serif;
     max-width: 300px;
     padding: 20px 0 ;
@@ -85,18 +72,18 @@ body{
     font-family: 'Just Another Hand', cursive;
     font-size: 20px;
 }
-.form{
+.container .form{
     padding: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* align-items: center; */
+   
 
 }
-.form .tel{
+.form .tel, .form .coppy_link{
     border-radius: 30px;
 }
-.form .tel, .form .msg{
+.form .tel, .form .msg, .form .coppy_link{
     padding: 5px 15px;
 }
 .form .tel::placeholder, .form .msg::placeholder{
@@ -127,10 +114,14 @@ body{
 .form .coppy_link{
     display: none;
 }
+.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover{
+    outline: 0;
+    box-shadow: 10px 5px #00000063;
+    transition-duration: 500ms;
+}
 .form .coppy .coppy_btn{
     font-size: 18px;
     background-color: #f0f0f0;
-    border: none;
     min-width: 150px;
     height: 50px;
     display: flex;
@@ -138,9 +129,9 @@ body{
     align-items: center;
 } 
 
-/* 1. adicionar efeito de copiar e de gerar link nos botões
-2. colocar uma borda de selected de acordo com o layout nos inputs. */
-@media (min-width: 992px) {
+/* 1. adicionar efeito de copiar e de gerar link nos botões */
+
+@media (min-width: 1200px) {
     .img_um{
         left: 35%;
         top: 8%;
@@ -163,36 +154,82 @@ body{
         transform: rotate(220deg);
         z-index: -1;
     }
-    .wpp{
+    .container{
+        display: grid;  
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+    }
+    .container .header{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .container .header .wpp{
         margin-left: 100px;
         transform: translate(-50%, -8%);
     }
-    .hr_title{
+    .container .hr_title{
         width: 400px;
-        transform: translate(25%, -1000%);
+        transform: translate(-28%, -1000%);
         border: 1px solid black;
         border-radius: 50%;
         grid-column-start: 1;
         grid-column-end: 3;
+        margin: auto;
+        margin-bottom: 20px;
+
     }
-    .container{
-        display: grid;
+    .container .description{
+        margin: auto;
+        max-width: 480px;
+        text-transform: none;
+        font-size: 18px;
+
+    }
+    .container .my_adds{
+        position: relative;
+        top: 100px
+    }
+    .container .form{
+        max-width: 680px;
+         align-items: center;
+         justify-content: center;
+    }
+    .form .tel{
+        min-width: 520px;
+    }
+    .form .msg{
+        min-width: 600px;
+    }
+    .form .coppy_link{
+        display: inline;
+        background-color: #ffffff;
+        height: 55px;
+        min-width: 500px;
+        font-size: 18px;
+        border-style: 1px solid gray;
+        margin: 10px;
         
     }
-    .description{
-        margin: auto;
+    .form .tel, .form .msg, .form .coppy_link{
+        font-size: 20px;
     }
-    .my_adds{
-        margin: auto;
+    .sub_btn{
+        font-size: 20px;
+        min-width: 150px;
+        height: 50px;
+        border-radius: 40px;
+        padding: 0px 10px;
     }
-    .header{
-        grid-column-start: 1;
-        grid-column-end: 3;
+
+    .form .coppy .coppy_btn{
+        border: 1px solid black;
     }
-    .form{
-        max-width: 440px;
+    .my_adds .my_adds_word, .footer .donation{
+        font-size: 30px;
     }
+
     .footer{
-        margin: auto;
+        position: relative;
+        top: 100px;
     }
 }
