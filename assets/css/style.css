@@ -125,11 +125,12 @@ font-family: 'Bai Jamjuree', sans-serif;
 .form .coppy_link{
     display: none;
 }
-.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover{
+.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus{
     outline: 0;
     box-shadow: 10px 5px #00000063;
     transition-duration: 500ms;
 }
+
 .form .coppy .coppy_btn{
     font-size: 18px;
     background-color: #f0f0f0;
@@ -160,6 +161,12 @@ font-family: 'Bai Jamjuree', sans-serif;
     margin: 15px;
     border-bottom: 1px solid gray;
     padding: 10px;
+}
+.indication{
+    /* background-color: red; */
+    border: none;
+    padding: 0;
+    margin: 10px 0 0 0 ;
 }
 .li_icon{ 
     width: 50px;
