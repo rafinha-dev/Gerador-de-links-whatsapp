@@ -1,12 +1,15 @@
-/* falta colocar um estilo no focus dos inputs e text-area */
+html{
+    font-size: 62.5%;
+}
 body{
     height: 100% ;
     background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);
 }
+
 .img_um{
-    width: 180px;
+    width: 18rem;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 20%;
     transform: rotate(120deg);
     z-index: -1;
@@ -15,14 +18,14 @@ body{
     display: none;
 }
 .arrow{
-    min-width: 50px;
-    max-width: 100px;
-    height: 25px;
-    margin: 0px 10px;
+    min-width: 5rem;
+    max-width: 10rem;
+    height: 2.5rem;
+    margin: 0px 1rem;
     background-image: url(../images/setinhaMin.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20px;
+    background-size: 2rem;
     border-radius: 0 0 10px 10px;
 }
 .container{
@@ -40,18 +43,18 @@ body{
     font-family: 'Just Another Hand', cursive;
     /* padding: 00px 20px 0 0; */
     /* background-color: red; */
-    font-size: 40px;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 .container .header .wpp{
-    width: 65px;
-    height: 65px;
+    width: 6.5rem;
+    height: 6.5rem;
     /* transform: translate(0%, -00%); */
 }
 .container .description{
     font-family: 'Bai Jamjuree', sans-serif;
-    max-width: 300px;
-    padding: 20px 0 ;
+    max-width: 30rem;
+    padding: 2rem 0 ;
     text-align: center;
     text-transform: uppercase;
 }
@@ -59,23 +62,23 @@ body{
     background-color: #75F692CC;
     border: 1px solid black;
     border-radius: 20px;
-    max-width: 300px;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 2rem;
     text-transform: uppercase;
     
     
 }
 .my_adds .my_adds_word, .footer .donation{
     font-family: 'Just Another Hand', cursive;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: center;
 }
 .container .form{
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     /* gap: 20px; */
@@ -101,7 +104,7 @@ body{
     text-transform: uppercase;
 }
 .label{
-    font-size: 18px;
+    font-size: 1.8rem;
     width: 100%;
     font-family: 'Bai Jamjuree', sans-serif;
 }
@@ -112,10 +115,10 @@ font-family: 'Bai Jamjuree', sans-serif;
     background-color: #000000CC;
     font-weight: bold;
     color: #ffffff;
-    height: 40px;
-    max-width: 110px;
-    min-width: 80px;
-    margin: 30px auto;
+    height: 4rem;
+    max-width: 11rem;
+    min-width: 8rem;
+    margin: 3rem auto;
 }
 .form .coppy{
     display: flex;
@@ -132,18 +135,18 @@ font-family: 'Bai Jamjuree', sans-serif;
 }
 
 .form .coppy .coppy_btn{
-    font-size: 18px;
+    font-size: 1.8rem;
     background-color: #f0f0f0;
-    min-width: 150px;
-    height: 50px;
+    min-width: 15rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 } 
 
 .donation_btn{
-    width: 100px;
-    height: 40px;
+    width: 10rem;
+    height: 4rem;
     border-radius: 30px;
     margin-top: 10px;
     background-color: #ffcfd7;
@@ -151,14 +154,14 @@ font-family: 'Bai Jamjuree', sans-serif;
 }
 .share{
     font-family: 'Just Another Hand', cursive;
-    font-size: 25px;
+    font-size: 2.5rem;
     text-align: center;
 }
 .social_media{
     list-style: none;
     display: flex;
     gap: 10px;
-    margin: 15px;
+    margin: 1.5rem;
     border-bottom: 1px solid gray;
     padding: 10px;
 }
@@ -169,24 +172,24 @@ font-family: 'Bai Jamjuree', sans-serif;
     margin: 10px 0 0 0 ;
 }
 .li_icon{ 
-    width: 50px;
+    width: 5rem;
     display: flex;
     justify-content: center;
 }
 .icon{
     color: black;
-    font-size: 30px;
+    font-size: 3rem;
 }
 @media (min-width: 1200px) {
     .img_um{
         left: 35%;
         top: 8%;
-        width: 200px;
+        width: 20rem;
     }
     .img_dois, .img_tres{
         display: inline;
         position: absolute;
-        width: 180px;
+        width: 18rem;
     }
     .img_dois{
         transform: rotate(350deg);
@@ -210,11 +213,11 @@ font-family: 'Bai Jamjuree', sans-serif;
         grid-column-end: 3;
     }
     .container .header .wpp{
-        margin-left: 100px;
+        margin-left: 10rem;
         transform: translate(-50%, -8%);
     }
     .container .hr_title{
-        width: 400px;
+        width: 40rem;
         transform: translate(-28%, -1000%);
         border: 1px solid black;
         border-radius: 50%;
@@ -226,17 +229,17 @@ font-family: 'Bai Jamjuree', sans-serif;
     }
     .container .description{
         margin: auto;
-        max-width: 480px;
+        max-width: 48rem;
         text-transform: none;
-        font-size: 18px;
+        font-size: 1.8rem;
 
     }
     .container .my_adds{
         position: relative;
-        top: 100px
+        top: 10rem;
     }
     .container .form{
-        max-width: 680px;
+        max-width: 68rem;
          align-items: center;
          margin: auto;
          padding: 20px;
@@ -251,28 +254,28 @@ font-family: 'Bai Jamjuree', sans-serif;
 
     }
     .form .tel{
-        min-width: 520px;
+        min-width: 52rem;
     }
     .form .msg{
-        min-width: 600px;
+        min-width: 60rem;
     }
     .form .coppy_link{
         display: inline;
         background-color: #ffffff;
-        height: 55px;
-        min-width: 500px;
-        font-size: 18px;
+        height: 5.5rem;
+        min-width: 50rem;
+        font-size: 1.8rem;
         border-style: 1px solid gray;
         margin: 10px;
         
     }
     .form .tel, .form .msg, .form .coppy_link{
-        font-size: 20px;
+        font-size: 2rem;
     }
     .sub_btn{
-        font-size: 20px;
-        min-width: 150px;
-        height: 50px;
+        font-size: 2rem;
+        min-width: 15rem;
+        height: 5rem;
         border-radius: 40px;
         padding: 0px 10px;
     }
@@ -286,6 +289,6 @@ font-family: 'Bai Jamjuree', sans-serif;
 
     .footer{
         position: relative;
-        top: 100px;
+        top: 10rem;
     }
 }
