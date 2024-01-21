@@ -9,6 +9,7 @@ const objects = {
     coppy_link : document.querySelector('.coppy_btn'),
     share: document.querySelector('#share')
 }
+let avaleble_link = ""
 
 objects.area.innerHTML = ""
 
@@ -103,20 +104,35 @@ function coppyLink(link, num) {
 }
 function avalebleLink(link,num){
     let input = objects.input_link
+    avaleble_link = link + num
     if(num.length >= 10){
         input.value = link + num
     }
 }
 
-objects.share.addEventListener('click', ()=>{
+objects.share.addEventListener('click', share())
+objects.share.addEventListener('keyup', (e)=> {
+    if(e.keyCode === 13){
+        share()
+        console.log(`copiado endereço ${window.location.href}`)
+    }
+})
+// deveria essa ser uma função assincrona?
+function share(){
     if (navigator.share !== undefined) {
         navigator.share({
             title: 'Gerador de link para whatsapp',
             text: 'Crie agora mesmo um link para divulgar seu whatsapp, podendo usar uma mensagem programada! ',
             url: 'https://seusite.com/sua_url',
-        })}else{
+        })
+        }else{
             navigator.clipboard.writeText(document.location.href).then(()=> {
                 console.log(document.location.href)
             })
         }
-})
+}
+objects.coppy_link.addEventListener('keyup', (e)=>{
+    if( e.keyCode === 13){
+        navigator.clipboard.writeText(avaleble_link).then(()=>{console.log(`copiado resultado ${avaleble_link}`)})
+    }
+} )

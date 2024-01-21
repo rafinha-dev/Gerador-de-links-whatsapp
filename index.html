@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- ---- -->
     <link rel="shortcut icon" href="./assets/images/square-whatsapp.svg" type="image/x-icon">
-    <title>Gerador de link para whatssapp</title>
+    <title>Gerador de link para whatsapp</title>
 </head>
 <body>
     <img class="img_um"src="./assets/images/mancha100px.png" alt="mancha verde de tinta decorativa">
@@ -29,35 +29,38 @@
     </div>
     <div class="container">
         <header class="header">
-            <h1 class="title">Gerador de links para whatsapp</h1>
+            <h1 class="title">Gerador de links para <span lang="en-us" class="title">whatsapp</span></h1>
             
             <img class="wpp" src="./assets/images/square-whatsapp.svg" alt="Icone do whatssapp">
         </header>
         <hr class="hr_title">
         <article class="description">
-            <p> Crie um link com uma mensagem personalizada para o seu número do whatsapp. <br>
+            <p> Crie um link com uma mensagem personalizada para o seu número do <span lang="en-us">whatsapp.</span> <br>
             Ao clicar no link uma mensagem personalizada será carregada para o visitante entrar.
             </p>
         </article>
         <div class="my_adds">
-            <p class="my_adds_word">Meus produtos para whatssapp. Faça seu cadastro e venda com automação</p>
+            <p class="my_adds_word">Meus produtos para <span lang="en-us" class="my_adds_word">whatsapp</span>. Faça seu cadastro e venda com automação</p>
         </div>
         <form action="" class="form">
-            <input class="tel" placeholder="Numero do whatssapp" type="tel" name="telefone">
+                <label for="whatsapp" class="label">Digite o whatsapp</label>
+
+            <input class="tel" placeholder="(00) 00000-0000" type="tel" name="telefone" id="whatsapp">
             <div class="warning">
             </div>
-            <textarea class="msg" placeholder="Mensagem programada (opcional)" name="mensagem" id="" cols="30" rows="5">
+            <label for="msg" class="label">Mensagem para o link</label>
+            <textarea class="msg" placeholder="Mensagem programada (opcional)" name="mensagem" id="msg" cols="30" rows="5">
             </textarea>
             <input class="sub_btn" type="submit" value="Gerar link">
             <div class="coppy">
                 <input class="coppy_link" type="text">
-                <p class="coppy_btn">Copiar</p>
+                <p class="coppy_btn coppy_link" tabindex="0">Copiar</p>
             </div>
         </form>
         <footer class="footer">
-            <p class="share" >Compartilhe essa ferramenta nas redes sociais</p>
+            <p class="share" >Compartilhe essa ferramenta nas redes sociais!</p>
             <ul class="social_media">
-                <li class="li_icon" id="share">
+                <li class="li_icon" id="share" tabindex="0">
                         <i class="fas fa-share-alt-square icon"></i>
                 </li>
                 <li class="li_icon" >
@@ -76,7 +79,7 @@
                     </a>
                 </li>
             </ul>
-            <p class="donation">Gostou dessa ferramenta? Me pague um cafeziho.</p>
+            <p class="donation">Gostou dessa ferramenta? Me pague um caféziho.</p>
             <button class="donation_btn" >
                 <i class="fas fa-cookie-bite"></i>
                 Doação
