@@ -186,6 +186,13 @@ font-family: 'Bai Jamjuree', sans-serif;
     color: black;
     font-size: 3rem;
 }
+.modal{
+    margin: auto;
+}
+.content-modal{
+    display: flex;
+    flex-direction: column;
+}
 @media (min-width: 1200px) {
     .img_um{
         left: 35%;

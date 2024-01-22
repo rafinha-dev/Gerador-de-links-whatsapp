@@ -10,11 +10,16 @@ const objects = {
     share: document.querySelector('#share'),
     countrie: document.querySelector('#countries'), 
     url: window.location.href,
+
+    
 }
 const social_media = {
     whats_share: document.querySelector('.whats-share'),
     linkedin_share: document.querySelector('.linkedin-share'),
-    face_share: document.querySelector('.face-share')
+    face_share: document.querySelector('.face-share'),
+    donation_btn: document.querySelector('.donation_btn'),
+    modal: document.querySelector('.modal'),
+    btn_modal: document.querySelector('.modal-close')
 }
 let avaleble_link = ""
 objects.area.innerHTML = ""
@@ -146,6 +151,12 @@ function share(){
         }
 }
 
+social_media.donation_btn.addEventListener('click', ()=>{
+    social_media.modal.showModal()
+})
+social_media.btn_modal.addEventListener('click', ()=>{
+    social_media.modal.close()
+})
 social_media.whats_share.href = social_media.whats_share.href + objects.url
 social_media.linkedin_share.href = social_media.linkedin_share.href + objects.url
 social_media.face_share.href = social_media.face_share.href + objects.url
