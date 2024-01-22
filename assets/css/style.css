@@ -88,6 +88,9 @@ body{
 .form .tel, .form .coppy_link{
     border-radius: 30px;
 }
+.form .tel{
+    max-width: 16rem;
+}
 .form .tel, .form .msg, .form .coppy_link{
     padding: 5px 15px;
     border: 1px solid gray;
@@ -190,6 +193,7 @@ font-family: 'Bai Jamjuree', sans-serif;
     margin: auto;
 }
 .content-modal{
+
     display: flex;
     flex-direction: column;
 }
