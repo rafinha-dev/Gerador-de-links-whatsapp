@@ -90,6 +90,7 @@ body{
 }
 .form .tel, .form .msg, .form .coppy_link{
     padding: 5px 15px;
+    border: 1px solid gray;
 }
 .form .tel::placeholder, .form .msg::placeholder{
     text-transform: uppercase;

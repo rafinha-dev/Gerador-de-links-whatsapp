@@ -8,11 +8,18 @@ const objects = {
     input_link: document.querySelector('.coppy_link'),
     coppy_link : document.querySelector('.coppy_btn'),
     share: document.querySelector('#share'),
-    countrie: document.querySelector('#countries')
+    countrie: document.querySelector('#countries'), 
+    url: window.location.href,
+}
+const social_media = {
+    whats_share: document.querySelector('.whats-share'),
+    linkedin_share: document.querySelector('.linkedin-share'),
+    face_share: document.querySelector('.face-share')
 }
 let avaleble_link = ""
-
 objects.area.innerHTML = ""
+
+
 
 objects.form.addEventListener('submit', doEvent)
 function doEvent(e){
@@ -106,11 +113,16 @@ function coppyLink(link, num) {
 }
 function avalebleLink(link,num){
     let input = objects.input_link
-    avaleble_link = link + num
+    avaleble_link = link
     if(num.length >= 10){
         input.value = link 
     }
 }
+objects.coppy_link.addEventListener('keyup', (e)=>{
+    if( e.keyCode === 13){
+        navigator.clipboard.writeText(avaleble_link).then(()=>{console.log(`copiado resultado ${avaleble_link}`)})
+    }
+} )
 
 objects.share.addEventListener('click', share())
 objects.share.addEventListener('keyup', (e)=> {
@@ -125,16 +137,15 @@ function share(){
         navigator.share({
             title: 'Gerador de link para whatsapp',
             text: 'Crie agora mesmo um link para divulgar seu whatsapp, podendo usar uma mensagem programada! ',
-            url: 'https://seusite.com/sua_url',
-        })
+            url: `https://seusite.com/sua_url ${objects.url}`,
+    })
         }else{
             navigator.clipboard.writeText(document.location.href).then(()=> {
                 console.log(document.location.href)
             })
         }
 }
-objects.coppy_link.addEventListener('keyup', (e)=>{
-    if( e.keyCode === 13){
-        navigator.clipboard.writeText(avaleble_link).then(()=>{console.log(`copiado resultado ${avaleble_link}`)})
-    }
-} )
+
+social_media.whats_share.href = social_media.whats_share.href + objects.url
+social_media.linkedin_share.href = social_media.linkedin_share.href + objects.url
+social_media.face_share.href = social_media.face_share.href + objects.url
