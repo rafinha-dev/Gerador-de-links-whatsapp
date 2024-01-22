@@ -2,7 +2,7 @@
   
 # -Gerador de links para whatsapp
 
-[![whatsapp](https://github.com/rafinha-dev/Gerador-de-links-whatsapp/blob/master/assets/images/square-whatsapp.svg)](https://rafinha-dev.github.io/Gerador-de-links-whatsapp/)
+<a href="https://rafinha-dev.github.io/Gerador-de-links-whatsapp/" > <img src="https://github.com/rafinha-dev/Gerador-de-links-whatsapp/blob/master/assets/images/square-whatsapp.svg" width="50px"></a>
   
 `clique na logo para abrir o site`  
   
@@ -15,8 +15,20 @@ E foi assim que gastei uma semana desde a concepção da ideia no figma até o p
 
 Aqui começo a colocar em pratica a tentativa de monetizar minhas produções como desenvolvedor. Mesmo sabendo que iria falhar em diversos pontos, planos mal feitos ou pouco planejados tendem a fortalecer a ideia de criação de planos melhores, e foi essa a mentalidade que tive para criação desse projeto.
 
-
-![site](https://github.com/rafinha-dev/Gerador-de-links-whatsapp/blob/master/assets/images/resultado/Peek%202024-01-22%2017-37.mp4)
+ <table align="center" height="500px;">
+  <tr> 
+    <td>
+      <img  style="width: 370px;" src="https://github.com/rafinha-dev/Gerador-de-links-whatsapp/blob/master/assets/images/resultado/desktop.png">
+    </td>
+  </tr>
+  <tr> 
+    <td>
+      <p align="center"> Mobile  </p>
+      <img  style="width: 370px;" src="https://github.com/rafinha-dev/Gerador-de-links-whatsapp/blob/master/assets/images/resultado/Peek%202024-01-22%2018-00.gif">
+    </td>
+  </tr>
+ 
+ </table>
 
 ## Tecnologias utilizadas
 - [x] HTML
