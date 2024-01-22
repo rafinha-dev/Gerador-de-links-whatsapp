@@ -97,7 +97,12 @@ body{
 .form .msg, .form .sub_btn, .form .coppy .coppy_btn{
     border-radius: 20px;
 }
-
+.countries{
+    max-width: 10.5rem;
+    height: 3.2rem;
+    border-radius: 1rem;
+    background-color: #ffffff;
+}
 .form .warning{
     color: #FF0404;
     text-align: center;
@@ -128,7 +133,7 @@ font-family: 'Bai Jamjuree', sans-serif;
 .form .coppy_link{
     display: none;
 }
-.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus{
+.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus{
     outline: 0;
     box-shadow: 10px 5px #00000063;
     transition-duration: 500ms;
@@ -247,14 +252,14 @@ font-family: 'Bai Jamjuree', sans-serif;
          background-color: #ffcfd738;
     }
     .label{
-        padding: 30px 0px 0px 30px;
+        padding: 3rem 0px 0px 3rem;
     }
     .label:nth-child(1){
-        padding: 30px 0px 0px 70px ;
+        padding: 3rem 0px 0px 14rem ;
 
     }
     .form .tel{
-        min-width: 52rem;
+        min-width: 50rem;
     }
     .form .msg{
         min-width: 60rem;

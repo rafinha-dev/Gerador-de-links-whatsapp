@@ -7,7 +7,8 @@ const objects = {
     get_link : document.querySelector('.sub_btn'),
     input_link: document.querySelector('.coppy_link'),
     coppy_link : document.querySelector('.coppy_btn'),
-    share: document.querySelector('#share')
+    share: document.querySelector('#share'),
+    countrie: document.querySelector('#countries')
 }
 let avaleble_link = ""
 
@@ -70,7 +71,8 @@ const maskRemove = (value)=> {
 }
 const makeNumLink = (num)=> {
     let link_num_index = "https://wa.me/"
-    let finished_num = link_num_index + num
+    let countrie_c = objects.countrie.value
+    let finished_num = link_num_index + countrie_c + num
     return finished_num
 }
 
@@ -106,7 +108,7 @@ function avalebleLink(link,num){
     let input = objects.input_link
     avaleble_link = link + num
     if(num.length >= 10){
-        input.value = link + num
+        input.value = link 
     }
 }
 
