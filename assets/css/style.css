@@ -1,9 +1,17 @@
-html{
+:root{
     font-size: 62.5%;
+    --main-color : #B6FFF6;
+    --secundary-color : #ffffff;
+    --warning-color : #FF0404;
+    --shadow-white : #f0f0f0;
+    --pink-disney : #ffcfd7;
+    --whatsapp-color: #75F692CC;
+
 }
+
 body{
     height: 100% ;
-    background-image: linear-gradient( to bottom, #ffffff, #B6FFF6);
+    background-image: linear-gradient( to bottom, --secundary-color, --main-color);
 }
 
 .img_um{
@@ -59,7 +67,7 @@ body{
     text-transform: uppercase;
 }
 .my_adds, .footer{
-    background-color: #75F692CC;
+    background-color: var(--whatsapp-color);
     border: 1px solid black;
     border-radius: 20px;
     max-width: 30rem;
@@ -85,30 +93,31 @@ body{
    
 
 }
-.form .tel, .form .coppy_link{
+.coppy_link{
     border-radius: 30px;
 }
 .form .tel{
     max-width: 16rem;
 }
-.form .tel, .form .msg, .form .coppy_link{
+.form .tel, .form .msg, .coppy_link{
     padding: 5px 15px;
     border: 1px solid gray;
+    border-radius: 20px;
 }
 .form .tel::placeholder, .form .msg::placeholder{
     text-transform: uppercase;
 }
-.form .msg, .form .sub_btn, .form .coppy .coppy_btn{
+.form .msg, .form .sub_btn, .coppy .coppy_btn{
     border-radius: 20px;
 }
 .countries{
     max-width: 10.5rem;
     height: 3.2rem;
     border-radius: 1rem;
-    background-color: #ffffff;
+    background-color: var(--secundary-color);
 }
 .form .warning{
-    color: #FF0404;
+    color: var(--warning-color);
     text-align: center;
     text-transform: uppercase;
 }
@@ -123,42 +132,46 @@ font-family: 'Bai Jamjuree', sans-serif;
 .sub_btn{
     background-color: #000000CC;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--secundary-color);
     height: 4rem;
     max-width: 11rem;
     min-width: 8rem;
     margin: 3rem auto;
 }
-.form .coppy{
+.coppy{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 1rem 0 3rem;
+    
 }
-.form .coppy_link{
+/* .form .coppy_link{
     display: none;
-}
+} */
 .msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus{
     outline: 0;
     box-shadow: 10px 5px #00000063;
     transition-duration: 500ms;
 }
 
-.form .coppy .coppy_btn{
+.coppy .coppy_btn{
     font-size: 1.8rem;
-    background-color: #f0f0f0;
+    background-color: var(--shadow-white);
     min-width: 15rem;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 } 
+.coppy_link{
+    display: none;
+}
 
 .donation_btn{
     width: 10rem;
     height: 4rem;
     border-radius: 30px;
     margin-top: 10px;
-    background-color: #ffcfd7;
+    background-color: var(--pink-disney);
     border: 1px solid gray;
 }
 .share{
@@ -272,13 +285,14 @@ font-family: 'Bai Jamjuree', sans-serif;
     }
     .form .tel{
         min-width: 50rem;
+
     }
     .form .msg{
         min-width: 60rem;
     }
-    .form .coppy_link{
+    .coppy_link{
         display: inline;
-        background-color: #ffffff;
+        background-color: var(--secundary-color);
         height: 5.5rem;
         min-width: 50rem;
         font-size: 1.8rem;
@@ -286,8 +300,9 @@ font-family: 'Bai Jamjuree', sans-serif;
         margin: 10px;
         
     }
-    .form .tel, .form .msg, .form .coppy_link{
+    .form .tel, .form .msg, .coppy_link{
         font-size: 2rem;
+        
     }
     .sub_btn{
         font-size: 2rem;
@@ -297,7 +312,7 @@ font-family: 'Bai Jamjuree', sans-serif;
         padding: 0px 10px;
     }
 
-    .form .coppy .coppy_btn{
+    .coppy .coppy_btn{
         border: 1px solid black;
     }
     .my_adds .my_adds_word, .footer .donation{
