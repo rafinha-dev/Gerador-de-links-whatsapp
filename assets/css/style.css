@@ -144,7 +144,7 @@ font-family: 'Bai Jamjuree', sans-serif;
 /* .form .coppy_link{
     display: none;
 } */
-.msg:focus, .tel:focus, .coppy_link:focus, .coppy_btn:hover, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus{
+.msg:focus, .tel:focus, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus, .coppy_link:focus{
     outline: 0;
     box-shadow: 10px 5px #00000063;
     transition-duration: 500ms;
@@ -170,8 +170,13 @@ font-family: 'Bai Jamjuree', sans-serif;
 }
 .coppy_btn_clipboard{
     background-image: url(../images/copy-solid.svg);
-    box-shadow: inset -2px -3px 15px #00000091;
+    outline: thick solid #384b3d8f;
+    outline-width: 2px;
     transition: 0.5s;
+}
+.focus_btn:focus{
+    outline: thick solid #0d2000;
+    outline-width: 3px;
 }
 
 .coppy_link{
@@ -302,6 +307,9 @@ font-family: 'Bai Jamjuree', sans-serif;
     .form .msg{
         min-width: 60rem;
     }
+    .coppy{
+        align-items: center;
+    }
     .coppy_link{
         display: inline;
         background-color: var(--secundary-color);
@@ -310,6 +318,7 @@ font-family: 'Bai Jamjuree', sans-serif;
         font-size: 1.8rem;
         border-style: 1px solid gray;
         margin: 10px;
+        border-radius: 20px;
         
     }
     .form .tel, .form .msg, .coppy_link{

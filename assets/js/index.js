@@ -28,7 +28,7 @@ objects.area.innerHTML = ""
 
 objects.form.addEventListener('submit', doEvent)
 function doEvent(e){
-
+    
     e.preventDefault()
 
     let warning = createWarning()
@@ -108,6 +108,9 @@ const finished_link = (num, msg)=> {
 }
 objects.coppy_link.addEventListener('click', ()=>{
     objects.coppy_link.classList.add('coppy_btn_clipboard')
+    setTimeout(()=>{
+            objects.coppy_link.classList.replace("coppy_btn_clipboard", "coppy_btn_img")
+    },"1500")
 })
 
 function coppyLink(link, num) {
