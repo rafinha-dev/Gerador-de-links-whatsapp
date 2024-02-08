@@ -1,14 +1,3 @@
-:root{
-    font-size: 62.5%;
-    --main-color : #B6FFF6;
-    --secundary-color : #ffffff;
-    --warning-color : #FF0404;
-    --shadow-white : #f0f0f0;
-    --pink-disney : #ffcfd7;
-    --whatsapp-color: #75F692CC;
-
-}
-
 body{
     height: 100% ;
     background-image:  url(../images/manchadeitada100px.svg),
@@ -19,29 +8,6 @@ body{
     background-repeat: no-repeat;
     background-position: 30% 2%, top;
     /* background-size: 140px; */
-}
-
-.img_um{
-    width: 18rem;
-    position: absolute;
-    top: 0;
-    left: 20%;
-    transform: rotate(120deg);
-    z-index: -1;
-}
-.img_dois, .img_tres{
-    display: none;
-}
-.arrow{
-    min-width: 5rem;
-    max-width: 10rem;
-    height: 2.5rem;
-    margin: 0px 1rem;
-    background-image: url(../images/setinhaMin.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 2rem;
-    border-radius: 0 0 10px 10px;
 }
 .container{
     display: flex;
@@ -56,15 +22,12 @@ body{
 }
 .container .header .title{
     font-family: 'Just Another Hand', cursive;
-    /* padding: 00px 20px 0 0; */
-    /* background-color: red; */
     font-size: 4rem;
     text-transform: uppercase;
 }
 .container .header .wpp{
     width: 6.5rem;
     height: 6.5rem;
-    /* transform: translate(0%, -00%); */
 }
 .container .description{
     font-family: 'Bai Jamjuree', sans-serif;
@@ -96,14 +59,11 @@ body{
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
-   
-
 }
 .form .tel{
     max-width: 16rem;
 }
-.form .tel, .form .msg{
+.form .tel, .form .msg, .coppy .coppy_link{
     padding: 5px 15px;
     border: 1px solid gray;
     border-radius: 20px;
@@ -142,16 +102,16 @@ font-family: 'Bai Jamjuree', sans-serif;
     min-width: 8rem;
     margin: 3rem auto;
 }
+.msg:focus, .tel:focus, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus, .coppy_link:focus{
+    outline: 0;
+    box-shadow: 10px 5px #00000063;
+    transition-duration: 500ms;
+}
 .coppy{
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 0 3rem;
     
-}
-.msg:focus, .tel:focus, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus, .coppy_link:focus{
-    outline: 0;
-    box-shadow: 10px 5px #00000063;
-    transition-duration: 500ms;
 }
 
 .coppy .coppy_btn{
@@ -214,12 +174,12 @@ font-family: 'Bai Jamjuree', sans-serif;
     color: black;
     font-size: 3rem;
 }
-@media (min-width: 900px){
+@media screen and (min-width: 900px){
     body{
         background-position: 40% 6%;
     }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     body{
         background-image: url(../images/manchadeitada100px.svg),
                           url(../images/mancha100px.svg),
@@ -230,28 +190,6 @@ font-family: 'Bai Jamjuree', sans-serif;
                                var(--main-color));
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-position: 40% 2%, 3% 45%, 70% 55%;
-    }
-    .img_um{
-        left: 35%;
-        top: 8%;
-        width: 20rem;
-    }
-    .img_dois, .img_tres{
-        display: inline;
-        position: absolute;
-        width: 18rem;
-    }
-    .img_dois{
-        transform: rotate(350deg);
-        top: 70%;
-        left: 12%;
-        z-index: -1;
-    }
-    .img_tres{
-        top: 60%;
-        left: 60%;
-        transform: rotate(220deg);
-        z-index: -1;
     }
     .container{
         display: grid;  
@@ -304,15 +242,25 @@ font-family: 'Bai Jamjuree', sans-serif;
         padding: 3rem 0px 0px 14rem ;
 
     }
+    .form .tel, .form .msg, .coppy_link{
+        font-size: 2rem;   
+    }
     .form .tel{
         min-width: 50rem;
-
     }
     .form .msg{
         min-width: 60rem;
     }
+    .sub_btn{
+        font-size: 2rem;
+        min-width: 15rem;
+        height: 5rem;
+        border-radius: 40px;
+        padding: 0px 10px;
+    }
     .coppy{
         align-items: center;
+        justify-content: center;
     }
     .coppy_link{
         display: inline;
@@ -325,25 +273,12 @@ font-family: 'Bai Jamjuree', sans-serif;
         border-radius: 20px;
         
     }
-    .form .tel, .form .msg, .coppy_link{
-        font-size: 2rem;
-        
-    }
-    .sub_btn{
-        font-size: 2rem;
-        min-width: 15rem;
-        height: 5rem;
-        border-radius: 40px;
-        padding: 0px 10px;
-    }
-
     .coppy .coppy_btn{
         border: 1px solid black;
     }
     .my_adds .my_adds_word, .footer .donation{
         font-size: 25px;
     }
-
     .footer{
         position: relative;
         top: 10rem;

@@ -5,3 +5,13 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
+:root{
+    font-size: 62.5%;
+    --main-color : #B6FFF6;
+    --secundary-color : #ffffff;
+    --warning-color : #FF0404;
+    --shadow-white : #f0f0f0;
+    --pink-disney : #ffcfd7;
+    --whatsapp-color: #75F692CC;
+
+}
