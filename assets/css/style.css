@@ -12,6 +12,10 @@
 body{
     height: 100% ;
     background-image: linear-gradient( to bottom, --secundary-color, --main-color);
+    background-image:  url(../images/manchadeitada100px.svg);
+    background-repeat: no-repeat;
+    background-position: 30% 2%;
+    background-size: 140px;
 }
 
 .img_um{
@@ -227,7 +231,19 @@ font-family: 'Bai Jamjuree', sans-serif;
     display: flex;
     flex-direction: column;
 }
+@media (min-width: 900px){
+    body{
+        background-position: 40% 6%;
+    }
+}
 @media (min-width: 1200px) {
+    body{
+        background-image: url(../images/manchadeitada100px.svg),
+                          url(../images/mancha100px.svg),
+                          url(../images/manchapracima100px.svg);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: 40% 8%, 10% 70%, 70% 55%;
+    }
     .img_um{
         left: 35%;
         top: 8%;
