@@ -106,6 +106,10 @@ const finished_link = (num, msg)=> {
     }
     return link
 }
+objects.coppy_link.addEventListener('click', ()=>{
+    objects.coppy_link.classList.add('coppy_btn_clipboard')
+})
+
 function coppyLink(link, num) {
 
     if(num.length >= 10){

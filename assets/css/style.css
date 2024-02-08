@@ -93,13 +93,10 @@ body{
    
 
 }
-.coppy_link{
-    border-radius: 30px;
-}
 .form .tel{
     max-width: 16rem;
 }
-.form .tel, .form .msg, .coppy_link{
+.form .tel, .form .msg{
     padding: 5px 15px;
     border: 1px solid gray;
     border-radius: 20px;
@@ -107,7 +104,7 @@ body{
 .form .tel::placeholder, .form .msg::placeholder{
     text-transform: uppercase;
 }
-.form .msg, .form .sub_btn, .coppy .coppy_btn{
+.form .msg, .form .sub_btn{
     border-radius: 20px;
 }
 .countries{
@@ -155,13 +152,28 @@ font-family: 'Bai Jamjuree', sans-serif;
 
 .coppy .coppy_btn{
     font-size: 1.8rem;
-    background-color: var(--shadow-white);
-    min-width: 15rem;
-    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 4rem;
+    min-width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+
+    background-repeat: no-repeat;
+    background-position: 13px 5px ;
+    background-size: 25px;
 } 
+.coppy_btn_img{
+    background-image: url(../images/copy-regular.svg);
+    transition: 0.5s;
+}
+.coppy_btn_clipboard{
+    background-image: url(../images/copy-solid.svg);
+    box-shadow: inset -2px -3px 15px #00000091;
+    transition: 0.5s;
+}
+
 .coppy_link{
     display: none;
 }
