@@ -1,0 +1,10 @@
+.coppy_btn_img{
+    background-image: url(../images/copy-regular.svg);
+    transition: 0.5s;
+}
+.coppy_btn_clipboard{
+    background-image: url(../images/copy-solid.svg);
+    outline: thick solid #384b3d8f;
+    outline-width: 2px;
+    transition: 0.5s;
+}

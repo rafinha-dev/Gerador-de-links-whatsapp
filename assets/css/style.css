@@ -11,11 +11,14 @@
 
 body{
     height: 100% ;
-    background-image: linear-gradient( to bottom, --secundary-color, --main-color);
-    background-image:  url(../images/manchadeitada100px.svg);
+    background-image:  url(../images/manchadeitada100px.svg),
+                       linear-gradient( 
+                            to bottom,  
+                               var(--secundary-color),
+                               var(--main-color));
     background-repeat: no-repeat;
-    background-position: 30% 2%;
-    background-size: 140px;
+    background-position: 30% 2%, top;
+    /* background-size: 140px; */
 }
 
 .img_um{
@@ -145,9 +148,6 @@ font-family: 'Bai Jamjuree', sans-serif;
     padding: 1rem 0 3rem;
     
 }
-/* .form .coppy_link{
-    display: none;
-} */
 .msg:focus, .tel:focus, .donation_btn:focus,.donation_btn:hover, .icon:hover, a:focus, .contries:focus, .coppy_link:focus{
     outline: 0;
     box-shadow: 10px 5px #00000063;
@@ -168,16 +168,7 @@ font-family: 'Bai Jamjuree', sans-serif;
     background-position: 13px 5px ;
     background-size: 25px;
 } 
-.coppy_btn_img{
-    background-image: url(../images/copy-regular.svg);
-    transition: 0.5s;
-}
-.coppy_btn_clipboard{
-    background-image: url(../images/copy-solid.svg);
-    outline: thick solid #384b3d8f;
-    outline-width: 2px;
-    transition: 0.5s;
-}
+
 .focus_btn:focus{
     outline: thick solid #0d2000;
     outline-width: 3px;
@@ -240,9 +231,13 @@ font-family: 'Bai Jamjuree', sans-serif;
     body{
         background-image: url(../images/manchadeitada100px.svg),
                           url(../images/mancha100px.svg),
-                          url(../images/manchapracima100px.svg);
+                          url(../images/manchapracima100px.svg),
+                          linear-gradient( 
+                            to bottom,  
+                               var(--secundary-color),
+                               var(--main-color));
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-position: 40% 8%, 10% 70%, 70% 55%;
+        background-position: 40% 2%, 3% 45%, 70% 55%;
     }
     .img_um{
         left: 35%;
@@ -270,6 +265,7 @@ font-family: 'Bai Jamjuree', sans-serif;
         display: grid;  
         grid-template-columns: auto auto;
         column-gap: 20px;
+        padding: 2% 0 0 0 ;
     }
     .container .header{
         grid-column-start: 1;
