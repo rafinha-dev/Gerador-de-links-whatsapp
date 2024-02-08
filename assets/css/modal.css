@@ -1,0 +1,37 @@
+.modal{
+    margin: auto;
+    padding: 3rem;
+    max-width: 40rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, .6);
+}
+.modal-close{
+    min-height: 2.9rem;
+    min-width: 3rem;
+    background-image: url(../images/square-xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 40%;
+
+    display: block;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+.content-modal{
+
+    display: flex;
+    flex-direction: column;
+}
+.pix{
+    text-transform: lowercase;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var( --main-color);
+    max-width: 15rem;
+    align-self: center;
+}

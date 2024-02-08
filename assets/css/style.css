@@ -214,14 +214,6 @@ font-family: 'Bai Jamjuree', sans-serif;
     color: black;
     font-size: 3rem;
 }
-.modal{
-    margin: auto;
-}
-.content-modal{
-
-    display: flex;
-    flex-direction: column;
-}
 @media (min-width: 900px){
     body{
         background-position: 40% 6%;
